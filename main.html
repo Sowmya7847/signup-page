@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Profile Setup</h2>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="phone" placeholder="Phone Number">
+        <button id="save-profile">Save</button>
+    </div>
+
+    <script>
+        document.getElementById("save-profile").addEventListener("click", () => {
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            alert(`Profile Saved! Name: ${name}, Phone: ${phone}`);
+            window.location.href = "main.html";
+        });
+    </script>
+</body>
+</html>
